@@ -26,7 +26,7 @@
 
 ## web技能
 
-1. 搞服务器
+1. Linux
 
 2. 计算机网络
 	* 重点: HTTP协议
@@ -37,16 +37,24 @@
 
 2. Php
 
+3. Java
+
+4. JavaScript
+
+5. C
+
 ## 程序员技能
 
-0. 数据结构和算法
+* 数据结构和算法
 
-1. git
+* 操作系统
 
-2. vim
+* git
 
-3. github
+* vim
 
-4. markdown
+* github
+
+* markdown
 
 5. linux
