@@ -1,3 +1,22 @@
+<!-- vim-markdown-toc GFM -->
+* [考察encodeURI](#考察encodeuri)
+* [考察linux](#考察linux)
+* [考察BOM对象](#考察bom对象)
+	* [系统对话框](#系统对话框)
+* [考察==和===的区别](#考察和的区别)
+* [考察Date类型](#考察date类型)
+* [考察CSS3](#考察css3)
+* [考察？](#考察)
+* [不能触发layout和paint的是?](#不能触发layout和paint的是)
+* [考察canvas](#考察canvas)
+* [考察闭包](#考察闭包)
+* [考察执行环境与作用域](#考察执行环境与作用域)
+* [谈谈对this的理解](#谈谈对this的理解)
+* [考察ES6](#考察es6)
+* [附加题，见button.html](#附加题见buttonhtml)
+
+<!-- vim-markdown-toc -->
+
 ## 考察encodeURI
 
 encodeURI(), decodeURI()它们都是Global对象的方法。
@@ -131,4 +150,4 @@ p(2); // 2
 
 ## 考察ES6
 
-## 附加题，见button.html
+## 附加题，见[button.html](https://github.com/yzfdjzwl/LearnPath/blob/master/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/2017%E6%90%BA%E7%A8%8B%E5%AE%9E%E4%B9%A0%E7%94%9F%E7%AC%94%E8%AF%95/button.html)
