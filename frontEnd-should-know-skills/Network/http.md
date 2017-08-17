@@ -44,6 +44,14 @@
 * get会把参数加到URL中，post不会
 * get传输的数据量小，post传输的数据量相对大一些。
 * get安全性低，post安全性高。
+* get数据在url中可见，post数据不会显示在url中。
+* post安全性更高，因为参会不会被保存在浏览器历史中。
+* 编码类型不一样，get: `application/x-www-form-urlencoded`, post: `application/x-www-form-urlencoded`或`multipart/form-data`。
+
+## TCP与UDP的区别
+
+1. TCP：面向连接、传输可靠(保证数据正确性,保证数据顺序)、用于传输大量数据(流模式)、速度慢，建立连接需要开销较多(时间，系统资源)。
+2. UDP：面向非连接、传输不可靠、用于传输少量数据(数据包模式)、速度快。
 
 ## 重点
 
@@ -52,5 +60,10 @@
 3. 缓存
 4. Web安全
 5. HTTP, UDP, TCP
-6. 三次握手
+6. 三次握手, 四次挥手。
 7. https, http2
+8. GET与POST区别
+
+## 看这里
+
+1. [总结1](http://www.cnblogs.com/yzfdjzwl/p/6668358.htm)
