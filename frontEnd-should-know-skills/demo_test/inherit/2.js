@@ -2,7 +2,7 @@ function SuperType() {
   this.colors = ['red', 'blue'];
 }
 
-SuperType.prototype = function() {
+SuperType.prototype.getColors = function() {
   return this.colors;
 };
 
@@ -13,7 +13,7 @@ SubType.prototype = new SuperType();
 
 var instance1 = new SubType();
 instance1.colors.push('green');
-console.log(instance1.colors);
+console.log(instance1.getColors());
 
 var instance2 = new SubType();
-console.log(instance2.colors);
+console.log(instance2.getColors());

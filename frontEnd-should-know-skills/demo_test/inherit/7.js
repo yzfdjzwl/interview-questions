@@ -34,10 +34,10 @@ function object(prototype) {
 };
 
 // 寄生式
-function inheritPrototype(sbType, spType) {
-  var prototype = object(spType.prototype); // 创建对象
-  prototype.constructor = sbType; // 增强对象
-  sbType.prototype = prototype; // 指定对象
+function inheritPrototype(subType, superType) {
+  var prototype = object(superType.prototype); // 创建对象
+  prototype.constructor = subType; // 增强对象
+  subType.prototype = prototype; // 指定对象
 }
 
 var instance1 = new SubType('yuzf', '21');
