@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>双飞翼布局</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .clearfix:after {
+      display: block;
+      content: '';
+      clear: both;
+    }
+    .left, .right, .middle {
+      float: left;
+      height: 200px;
+    }
+    .left, .right {
+      width: 100px;
+    }
+    .left {
+      background: #333;
+      margin-left: -100%;
+    }
+    .right {
+      background: #eee;
+      margin-left: -100px;
+    }
+    .middle {
+      width: 100%;
+    }
+    .inner {
+      height: 200px;
+      background: lightgreen;
+      margin-left: 100px;
+      margin-right: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="parent clearfix">
+    <div class="middle">
+      <div class="inner">
+        <ul>
+          <li>前面部分和圣杯布局没有什么区别</li>
+          <li>区别在于，双飞翼布局不使用父级的padding，而是设置内部的div的margin-left和margin-right</li>
+          <li>注意：取消middle的背景颜色和高度，设置到inner里面, width: 100%依然是middle</li>
+        </ul>
+      </div>
+    </div>
+    <div class="left"></div>
+    <div class="right"></div>
+  </div>
+</body>
+</html>

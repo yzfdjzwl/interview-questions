@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    .parent {
+      width: 100%;
+      position: relative;
+    }
+    .left, .right, .middle {
+      height: 200px;
+    }
+    .left, .right {
+      width: 100px;
+    }
+    .left {
+      position: absolute;
+      background: #333;
+      left: 0;
+      top: 0;
+    }
+    .right {
+      position: absolute;
+      background: #eee;
+      right: 0;
+      top: 0;
+    }
+    .middle {
+      margin-left: 100px;
+      margin-right: 100px;
+      background: lightgreen;
+      text-align: center;
+      line-height: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div class="parent clearfix">
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="middle">absolute</div>
+  </div>
+</body>
+</html>
