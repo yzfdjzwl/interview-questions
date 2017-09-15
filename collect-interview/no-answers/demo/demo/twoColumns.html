@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    .left {
+      width: 100px;
+      height: 200px;
+      background: #333;
+      float: left;
+    }
+    .right {
+      height: 200px;
+      background: #eee;
+      margin-left: 150px;
+    }
+
+
+    .parent {
+      display: flex;
+    }
+    .left1 {
+      width: 100px;
+      height: 200px;
+      background: #333;
+      margin-right: 50px;
+    }
+    .right1 {
+      flex: 1;
+      height: 200px;
+      background: #eee;
+    }
+
+    .left2 {
+      width: 100px;
+      height: 200px;
+      background: #333;
+      margin-right: 50px;
+      float: left;
+    }
+    .right2 {
+      background: #eee;
+      overflow: hidden;
+      height: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div class="left"></div>
+    <div class="right"></div>
+  </div>
+
+  <div class="parent">
+    <div class="left1"></div>
+    <div class="right1"></div>
+  </div>
+
+  <div>
+    <div class="left2"></div>
+    <div class="right2"></div>
+  </div>
+</body>
+</html>

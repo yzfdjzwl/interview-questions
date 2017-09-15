@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Drag Demo</title>
+    <style>
+        body{
+            background-size:100%;
+            padding: 20px ;
+        }
+        .icon{
+            width: 100px;height: 100px;margin-bottom:15px;position: absolute;cursor: move;
+        }
+        .icon-0{
+            top: 20px;
+            left: 20px;
+            width: 100px;
+            height: 100px;
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="icon icon-0"></div>
+</body>
+<script type="text/javascript">
+    function g(el){ return document.getElementsByClassName(el);}
+    var icons = g('icon');
+    var instace = false; //存放当前移动对象信息
+    for(var i = 0; i < icons.length; i++){
+        if(icons[i]) {
+            icons[i].addEventListener('mousedown', function (e) {
+                instace = {};
+                var e = e || window.event;
+                var el = e.toElement || e.target;
+                console.log(e);
+                instace.moveElement = el;
+                //  获取鼠标的坐标
+                var mouseX = e.pageX;
+                var mouseY = e.pageY;
+                //  获取元素左上角的坐标
+                var elX = el.offsetLeft;
+                var elY = el.offsetTop;
+                //  计算出偏移量
+                instace.offSetX = mouseX - elX;
+                instace.offSetY = mouseY - elY;
+                instace.moveElement.style.zIndex = 9000;
+            });
+        }
+    }
+    document.onmouseup = function(e){
+        instace.moveElement.style.zIndex = 2;
+        instace = false;
+    };
+    document.onmousemove = function(e){
+        if(instace){
+            //  获取当前鼠标坐标
+            var mouseX = e.pageX;
+            var mouseY = e.pageY;
+            //  计算元素移动坐标
+            var moveX = mouseX - instace.offSetX;
+            var moveY = mouseY - instace.offSetY;
+            //  计算最大移动坐标
+            var maxX = document.documentElement.clientWidth  - instace.moveElement.offsetWidth;
+            var maxY = document.documentElement.clientHeight - instace.moveElement.offsetHeight;
+            //  设置元素的坐标
+            instace.moveElement.style.left = Math.max(0,Math.min(maxX,moveX)) + 'px';
+            instace.moveElement.style.top  = Math.max(0,Math.min(maxY,moveY)) + 'px';
+        }
+    };
+</script>
+</html>

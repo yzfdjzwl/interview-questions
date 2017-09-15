@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+  <ul id="list">
+    <li>1</li>
+    <li>2</li>
+  </ul>
+</body>
+<script>
+  // 创建
+  var list = document.querySelector('ul');
+  var li3 = document.createElement('li');
+  li3.innerHTML = 3;
+  // 插入
+  list.appendChild(li3);
+
+  // 插入
+  var another = document.createElement('li');
+  another.innerHTML = 'another';
+  list.insertBefore(another, li3);
+
+  // 移动
+  var li1 = list.getElementsByTagName('li')[0];
+  list.appendChild(li1); // 将li1移动到最后
+  list.insertBefore(li1, another); // 再将li1移动到another前面
+
+  // 克隆元素
+  var cloneAnother = another.cloneNode(true); // true表示要克隆其子元素
+  list.append(cloneAnother);
+
+  // 删除元素
+  list.removeChild(cloneAnother);
+
+  // 插入后面
+  var li4 = document.createElement('li');
+  li4.innerHTML = 'li4';
+  insertAfter(li4, another);
+
+  function insertAfter(newNode, referenceNode) {
+    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+  }
+
+</script>
+</html>
