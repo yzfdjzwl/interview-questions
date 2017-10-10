@@ -687,7 +687,7 @@ hasOwnProperty()
 [参考](https://www.zhihu.com/question/19786827)
 
 1. cookie在客户端，session在服务端。
-2. 单个cookie的大小一般不超过4M，并且很多浏览器会限制一个站点的cookie最多20个。
+2. 单个cookie的大小一般不超过4kb，并且很多浏览器会限制一个站点的cookie最多20个。
 3. cookie相对于session来讲，不是很安全。
 4. 默认下，每一次回话，生成的SESSIONID会存在cookie里面，这样来保持会话；如果禁用cookie的话，有一种技术叫做url重写，会在url里面带上sid。
 5. session一般用来跟踪用户状态，cookie一般用来存储基本信息。
@@ -857,15 +857,16 @@ hasOwnProperty()
 ### 关于Node与java对比的总结
 
 * Node是解释性语言并且是动态语言，而Java是翻译性语言并且是静态语言，也就是说，Node的容错率比较低。
-* Node是基事件驱动，异步编程，非阻塞式IO，而Java是基于多线程编程，因此Node的资源利用率相对Java而言比较高。
+* Node是基事件驱动，异步编程，非阻塞式IO，而Java是基于多线程编程。
 * Node轻量高效，并且很好的支持Restful风格，适合中小型项目开发，而Java相对Node更适合大型项目开发。
-* Node是单线程的，因此如果一个线程崩了，那么整个应用就崩了。
 * Node的包很多，但是参差不齐，而Java的很多包都是经过考验的。
 
 ### 关于Nosql与Sql的对比的总结
 
 * nosql是非关系型的，sql是关系型的。
-* nosql可能有多种存储结构，比如(redis, Hbase, graph, mongodb), 而sql是表结构。
+* nosql可能有多种存储结构，比如(redis, graph, mongodb), 而sql是表结构。
 * nosql比较灵活，动态的schema, 而sql是严格的schema, 因此nosql扩展性比较强，不需要每条数据的格式都是一样的。
-* mongodb的内存映射机制，数据不是存储在硬盘里的，而是映射到内存里的，因此提升了IO效率。
 * 读写效率比较高，因为相关的数据都在一起，不需要花太多的时间去定位磁头。
+* mongodb的内存映射机制，数据不是存储在硬盘里的，而是映射到内存里的，因此提升了IO效率。(no say this)
+
+### 观察者模式

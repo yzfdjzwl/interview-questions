@@ -112,6 +112,7 @@
 2. relative
 3. absolute
 4. fixed
+5. stikey
 
 ## 快速排序
 
